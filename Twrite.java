@@ -8,20 +8,21 @@ public class Twrite{
     public static void main(String[] args) {
 
         boolean donu = true;
-        /*File fl = new File("file path");
+        File fl = new File("file path");
         FileWriter fw = null;
 
         try{
-            fw = new FileWriter(fl, true);
+            fw = new FileWriter(fl);
             donu = true;
         }catch(Exception e){
             e.printStackTrace();
-        }*/
+        }
 
         Calendar ca;
         if(donu){
 
             Scanner scr = new Scanner(System.in);
+            System.out.print("Enter seconds : ");
             int noofscd = scr.nextInt();
             scr.close();
 
@@ -32,11 +33,11 @@ public class Twrite{
                     for(int i=1; i<=noofscd; i++){
                         ca = Calendar.getInstance();
                         System.out.println(ca.get(Calendar.HOUR_OF_DAY)+":"+ca.get(Calendar.MINUTE)+":"+ca.get(Calendar.SECOND));
-                        //fw.write((ca.get(Calendar.HOUR_OF_DAY)+":"+ca.get(Calendar.MINUTE)+":"+ca.get(Calendar.SECOND))+"\n");
+                        fw.write((ca.get(Calendar.HOUR_OF_DAY)+":"+ca.get(Calendar.MINUTE)+":"+ca.get(Calendar.SECOND))+"\n");
                         Thread.sleep(1000);
                     }
 
-                    //fw.close();
+                    fw.close();
 
                 }catch(Exception e){
                     e.printStackTrace();

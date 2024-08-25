@@ -1,11 +1,18 @@
+import java.util.Calendar;
+import java.util.Date;
+
 public class Twrite{
 
     public static void main(String[] args) {
+
+        Calendar ca;
         
         for(int i=1; i<=10; i++){
-            System.out.println(i);
+
+            ca = Calendar.getInstance();
+            System.out.println(ca.get(Calendar.HOUR_OF_DAY)+":"+ca.get(Calendar.MINUTE)+":"+ca.get(Calendar.SECOND));
             try {
-                Thread.sleep(i*100);
+                Thread.sleep(1000);
             } catch (Exception e) {
                 e.printStackTrace();
             }

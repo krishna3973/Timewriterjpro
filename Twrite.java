@@ -32,8 +32,9 @@ public class Twrite{
 
                     for(int i=1; i<=noofscd; i++){
                         ca = Calendar.getInstance();
-                        System.out.println(ca.get(Calendar.HOUR_OF_DAY)+":"+ca.get(Calendar.MINUTE)+":"+ca.get(Calendar.SECOND));
-                        fw.write((ca.get(Calendar.HOUR_OF_DAY)+":"+ca.get(Calendar.MINUTE)+":"+ca.get(Calendar.SECOND))+"\n");
+                        String ttext = ca.get(Calendar.HOUR_OF_DAY)+":"+ca.get(Calendar.MINUTE)+":"+ca.get(Calendar.SECOND);
+                        System.out.println(ttext);
+                        fw.write(ttext+"\n");
                         Thread.sleep(1000);
                     }
 
